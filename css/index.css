@@ -131,16 +131,19 @@ img {
 }
 
 #todo-list{
-    width: 400;
+    width: 420px;
+    height: 500px;
     list-style-type: none;
-    background-color : rgb(255, 248, 249);
+    background-color : rgb(255, 248, 248);
     opacity: 80%;
     border-radius: 10px;
     padding-top: 15px;
     padding-bottom: 15px;
+    overflow: hidden;
 }
 
 #todo-list > li{
+    width: 40;
     font-family: 'Playfair Display','Noto Serif KR' ,serif;
     font-size: 25px;
     padding-left: 50px;
