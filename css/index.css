@@ -1,15 +1,204 @@
 
+
+
 .hidden{
     display : none;
 }
 
 img {
     position:absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 0px;
     right:0px;
     bottom:0px;
-    z-index: -1;
-    opacity:80%;
+    z-index: -99;
+    opacity:100%;
+}
+
+
+.container{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    background-color: #ffffff;
+    background-color: rgba( 255, 255, 255, 0.5 );
+    width: 90vw;
+    height: 90vh;
+    margin:  auto;
+    margin-top: 3%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+        "1 clock weather"
+        "1 login 6"
+        "1 todo 6"
+        "1 quote music"
+    ;
+
+}
+
+#login {
+    grid-area: login;
+    font-family: 'Playfair Display','Noto Serif KR', serif;
+    font-size: 30px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+#greeting {
+    text-shadow: 3px 3px 3px rgb(241, 211, 211);
+    animation: colorChange 2s linear infinite alternate;
+    transition:  color 0.2s ease-in 0.2s; 
+    transition:  transform 0.2s ease-in ;
+
+
+}
+
+#greeting:hover{
+    transform: scale(1.02);
+    color: #2f2f2f;
+}
+
+
+
+#login-form {
+    align-self: center;
+
+}
+#login-form input{
+    font-size: 25px;
+    width: 250px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    outline: none; 
+    padding-left: 40px;
+    opacity: 90%;
+    font-family: 'Playfair Display','Noto Serif KR' ,serif;
+    cursor: pointer;
+}
+
+#login-form button{
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    opacity: 80%;
+    font-family: 'Playfair Display','Noto Serif KR', serif;
+    background-color: #fff2f2;
+    color: rgb(38, 38, 38);
+}
+
+#quote {
+    grid-area: quote;
+    font-size: 18px;
+    font-family:'Playfair Display','Noto Serif KR', serif; ;
+    font-style: italic;
+    align-self: end;
+    justify-self: center;
+    margin-bottom: 25px;
+    color: #2f2f2f;
+    background-color: rgb(253, 244, 244);
+    opacity: 60%;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+#todo{
+    grid-area :todo;
+    justify-self: center;
+}
+
+#todo-form input{
+    font-size: 25px;
+    width: 400px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    outline: none; 
+    padding-left: 60px;
+    opacity: 90%;
+    font-family: 'Playfair Display','Noto Serif KR' ,serif;
+}
+
+#todo-list{
+    width: 400;
+    list-style-type: none;
+    background-color : rgb(255, 248, 249);
+    opacity: 80%;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#todo-list > li{
+    font-family: 'Playfair Display','Noto Serif KR' ,serif;
+    font-size: 25px;
+    padding-left: 50px;
+    display: flex;
+    position: relative;
+
+}
+
+.todo-deleteBtn{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    font-family: 'Playfair Display','Noto Serif KR' ,serif;
+    border:none;
+    border-radius: 10px;
+    opacity: 80%;
+    text-shadow: 3px 3px 3px rgb(241, 211, 211);
+    position: absolute;
+    right: 20px;
+    background-color: #fff7f7;
+
+
+}
+
+#weather{
+    grid-area :weather;
+    font-family: 'Playfair Display','Noto Serif KR', serif;
+    font-size: 30px;
+    font-style: italic;
+    text-shadow: 0.5px 1px 1px rgb(191, 185, 185);
+    opacity: 60%;
+    display: flex;
+    justify-content:end;
+    margin-top: 30px;
+    margin-right: 50px;
+    
+}
+
+#clock{
+    grid-area: clock;
+    font-family: 'Playfair Display','Noto Serif KR', serif;
+    font-size: 80px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    color:#ffecec;
+    text-shadow: 0.5px 1px 1px rgb(60, 60, 60);
+
+}
+
+
+#music{
+    width: 300px;
+    height: 35px;
+    grid-area: music;
+    align-self: end;
+    justify-self: end;
+    margin: 0 60px 20px 0;
+    opacity: 80%;
 }

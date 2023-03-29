@@ -15,7 +15,7 @@ function onLoginSubmit(event) {
 
 function paintGreetings(username){ // 그리팅 h1에서 클래스이름을 없애서 인삿말을 띄움.
     greeting.classList.remove(HIDDEN_CLASSNAME);
-    greeting.innerText = `Hello ${username}`; 
+    greeting.innerText = `Bonjour ${username} :) !`; 
 }
 
 
