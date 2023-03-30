@@ -35,24 +35,28 @@ img {
         "1 todo 6"
         "1 quote music"
     ;
+    position: relative;
 
 }
 
 #login {
+    width: 100%;
     grid-area: login;
     font-family: 'Playfair Display','Noto Serif KR', serif;
-    font-size: 30px;
     font-style: italic;
     display: flex;
     align-items: center;
     justify-content: center;
 
-
 }
 
 
-
+#greetingContainer{
+    width: 70%;
+    height: 50%;
+}
 #greeting {
+    font-size: 3vw;
     text-shadow: 3px 3px 3px rgb(241, 211, 211);
     animation: colorChange 2s linear infinite alternate;
     transition:  color 0.2s ease-in 0.2s; 
@@ -69,26 +73,29 @@ img {
 
 
 #login-form {
+    margin-left: 10%;
+    justify-self: center;
     align-self: center;
+    width: 67%;
 
 }
 #login-form input{
-    font-size: 25px;
-    width: 250px;
-    height: 50px;
+    font-size: 1vw;
+    text-align: center;
+    width: 60%;
+    height: ;
     border: 0;
     border-radius: 10px;
     outline: none; 
-    padding-left: 40px;
     opacity: 90%;
     font-family: 'Playfair Display','Noto Serif KR' ,serif;
     cursor: pointer;
 }
 
 #login-form button{
-    font-size: 20px;
-    width: 100px;
-    height: 50px;
+    font-size: 0.9vw;
+    text-align: center;
+    width: 25%;
     border: 0;
     border-radius: 10px;
     opacity: 80%;
@@ -99,7 +106,7 @@ img {
 
 #quote {
     grid-area: quote;
-    font-size: 18px;
+    font-size: 0.6vw;
     font-family:'Playfair Display','Noto Serif KR', serif; ;
     font-style: italic;
     align-self: end;
@@ -109,53 +116,63 @@ img {
     background-color: rgb(253, 244, 244);
     opacity: 60%;
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
 }
 
 
 #todo{
     grid-area :todo;
     justify-self: center;
+    width:60%;
+    height: 50vh;
+    overflow: hidden;
 }
 
+# todo-form{
+    width: 60%;
+}
 #todo-form input{
-    font-size: 25px;
-    width: 400px;
-    height: 50px;
+    font-size: 1vw;
+    width: 100%;
+    height: 10%;
     border: 0;
     border-radius: 10px;
     outline: none; 
-    padding-left: 60px;
+    text-align: center;
     opacity: 90%;
     font-family: 'Playfair Display','Noto Serif KR' ,serif;
+    padding: 5px 0 5px 0;
 }
 
 #todo-list{
-    width: 420px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
     list-style-type: none;
     background-color : rgb(255, 248, 248);
     opacity: 80%;
     border-radius: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;
     overflow: hidden;
+    padding-left: 0;
 }
 
 #todo-list > li{
-    width: 40;
+    width: 100%;
     font-family: 'Playfair Display','Noto Serif KR' ,serif;
     font-size: 25px;
-    padding-left: 50px;
+    text-align: center;
     display: flex;
     position: relative;
-
 }
 
+#todo-list > li > span{
+    margin : 0 0 1% 20%;
+    font-size: 1vw;
+} 
+
 .todo-deleteBtn{
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 10%;
+    height: 10%;
+    font-size: 1vw;
     font-family: 'Playfair Display','Noto Serif KR' ,serif;
     border:none;
     border-radius: 10px;
@@ -185,7 +202,7 @@ img {
 #clock{
     grid-area: clock;
     font-family: 'Playfair Display','Noto Serif KR', serif;
-    font-size: 80px;
+    font-size: 3vw;
     display: flex;
 
     justify-content: center;
@@ -197,11 +214,13 @@ img {
 
 
 #music{
-    width: 300px;
+    width: 40%;
     height: 35px;
     grid-area: music;
     align-self: end;
     justify-self: end;
-    margin: 0 60px 20px 0;
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
     opacity: 80%;
 }
